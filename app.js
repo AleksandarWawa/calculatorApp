@@ -20,10 +20,14 @@ btnIzracunaj.addEventListener('click', () => {
             case '3':
                 return brojA * brojB;
             case '4':
+                if (brojA !== 0 && brojB !== 0) {
                 return brojA / brojB;
-                default:
-                    return(`niste odabrali operaciju`);
+            } else {
+                    return(`zero or division by zero makes no sense`);
         }
+        default:
+            return (`Please chose option`)
+    }
     }
     rezultat.value = digitron(brojA,brojB);
 });
